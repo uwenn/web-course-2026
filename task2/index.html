@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SQL Bootcamp — онлайн-курс по SQL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">SQL<span>Bootcamp</span></div>
+
+        <nav class="nav">
+            <a href="#program">Программа</a>
+            <a href="#about">О курсе</a>
+            <a href="#contacts">Записаться</a>
+        </nav>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="mobile-nav">
+            <a href="#program">Программа</a>
+            <a href="#about">О курсе</a>
+            <a href="#contacts">Записаться</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">Онлайн-курс · 6 недель</span>
+            <h1>От <em>SELECT</em> до оконных функций</h1>
+            <p>Практический курс по SQL для аналитиков и разработчиков. Реальные задачи, живой код, финальный проект в
+                портфолио.</p>
+            <div class="hero-buttons">
+                <a href="#contacts" class="btn btn-primary">Записаться на поток</a>
+                <a href="#program" class="btn btn-ghost">Смотреть программу</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="img/hero.jpg" alt="SQL Bootcamp">
+        </div>
+    </section>
+
+    <section class="courses" id="program">
+        <div class="section-head">
+            <h2>Программа курса</h2>
+            <p>Три модуля, которые превратят тебя из новичка в уверенного аналитика</p>
+        </div>
+        <div class="cards">
+            <article class="card">
+                <img src="img/course1.jpg" alt="Основы SQL">
+                <div class="card-body">
+                    <span class="card-num">01</span>
+                    <h3>Основы SQL</h3>
+                    <p>SELECT, WHERE, ORDER BY, JOIN и группировка данных</p>
+                </div>
+            </article>
+            <article class="card">
+                <img src="img/course2.jpg" alt="Продвинутый SQL">
+                <div class="card-body">
+                    <span class="card-num">02</span>
+                    <h3>Продвинутый SQL</h3>
+                    <p>Подзапросы, оконные функции, CTE и оптимизация</p>
+                </div>
+            </article>
+            <article class="card">
+                <img src="img/course3.jpg" alt="Аналитика данных">
+                <div class="card-body">
+                    <span class="card-num">03</span>
+                    <h3>Аналитика данных</h3>
+                    <p>Работа с реальными датасетами и построение отчётов</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-inner">
+            <h2>О курсе</h2>
+            <p>Курс рассчитан на 6 недель. Каждую неделю — новые темы, практические задания и разборы. В конце —
+                финальный проект для портфолио.</p>
+            <ul class="about-list">
+                <li>Живые вебинары и записи</li>
+                <li>Проверка домашних заданий</li>
+                <li>Чат с одногруппниками и менторами</li>
+                <li>Сертификат по окончании</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+        <div class="section-head">
+            <h2>Записаться на поток</h2>
+            <p>Оставь заявку — мы свяжемся с тобой в течение дня</p>
+        </div>
+        <form class="form">
+            <input type="text" placeholder="Имя" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Сообщение" rows="4" required></textarea>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>© 2026 SQL Bootcamp. Все права защищены.</p>
+    </footer>
+
+</body>
+
+</html>
