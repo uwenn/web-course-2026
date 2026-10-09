@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Быки и коровы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+        <aside class="sidebar">
+            <h1>Быки<br>и коровы</h1>
+
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-label">Попыток</span>
+                    <span class="stat-value" id="attempts">0</span>
+                </div>
+            </div>
+
+            <button id="new-game-btn" class="new-game">Заново</button>
+
+            <p class="hint">
+                <strong>Бык</strong> — цифра на месте.<br>
+                <strong>Корова</strong> — цифра есть, но не там.
+            </p>
+        </aside>
+
+        <main class="board">
+            <div class="input-row">
+                <input type="text" id="guess-input" placeholder="0000" maxlength="4" inputmode="numeric"
+                    autocomplete="off">
+                <button id="check-btn">Проверить</button>
+            </div>
+
+            <p id="message" class="message"></p>
+
+            <div class="history-wrap">
+                <ul id="history"></ul>
+                <p class="empty-history">Пока пусто. Введи первую догадку.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
