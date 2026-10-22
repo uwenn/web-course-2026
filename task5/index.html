@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Симон говорит</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+        <header class="head">
+            <h1>Симон говорит</h1>
+            <p class="sub">Повтори последовательность. С каждым раундом она длиннее на один шаг.</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-label">Уровень</span>
+                <span class="stat-value" id="level">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Рекорд</span>
+                <span class="stat-value" id="best">0</span>
+            </div>
+        </div>
+
+        <div class="board">
+            <button class="pad pad-green" data-index="0" aria-label="Зелёный"></button>
+            <button class="pad pad-red" data-index="1" aria-label="Красный"></button>
+            <button class="pad pad-yellow" data-index="2" aria-label="Жёлтый"></button>
+            <button class="pad pad-blue" data-index="3" aria-label="Синий"></button>
+        </div>
+
+        <div class="controls">
+            <button id="start-btn" class="start-btn">Начать игру</button>
+        </div>
+
+        <p id="message" class="message">Нажми «Начать игру», чтобы приступить</p>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
