@@ -38,7 +38,6 @@ function showSequence() {
 
         schedule(() => {
             setPadActive(index, false);
-
             i++;
             schedule(next, CONFIG.BETWEEN_DELAY);
         }, CONFIG.ACTIVE_DURATION);
@@ -69,7 +68,7 @@ function handlePadClick(e) {
                 updateBest(state.best);
             }
 
-            showMessage('Верно! Следующий раунд...');
+            showMessage('ВЕРНО! СЛЕДУЮЩИЙ...');
 
             schedule(nextRound, CONFIG.ROUND_DELAY);
         }
@@ -92,9 +91,9 @@ function endGame() {
     clearAllPads();
     enablePads(false);
 
-    showMessage(`Вы дошли до уровня ${state.level}`, 'error');
+    showMessage(`ПРОВАЛ. УРОВЕНЬ ${state.level}`, 'error');
 
-    disableStartBtn(false, 'Заново');
+    disableStartBtn(false, 'ЗАНОВО');
 }
 
 export function startGame() {
@@ -103,11 +102,11 @@ export function startGame() {
     resetState();
 
     updateLevel(state.level);
-    showMessage('Смотри внимательно...');
+    showMessage('СМОТРИ И ЗАПОМИНАЙ...');
 
     clearAllPads();
     enablePads(true);
-    disableStartBtn(true, 'Начать игру');
+    disableStartBtn(true, 'ИГРА...');
 
     state.sequence.push(getRandomIndex());
     showSequence();

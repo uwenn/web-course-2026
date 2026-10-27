@@ -1,8 +1,8 @@
 export const CONFIG = {
-    SHOW_DELAY: 550,
+    SHOW_DELAY: 600,
     ACTIVE_DURATION: 400,
-    BETWEEN_DELAY: 180,
-    ROUND_DELAY: 900
+    BETWEEN_DELAY: 200,
+    ROUND_DELAY: 1000
 };
 
 export const state = {

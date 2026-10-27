@@ -36,5 +36,9 @@ export function enablePads(enabled) {
 
 export function disableStartBtn(disabled, text = '') {
     startBtn.disabled = disabled;
-    if (text) startBtn.textContent = text;
+    if (text) {
+        // Если передали текст, меняем его внутри span, чтобы не сломать верстку
+        const span = startBtn.querySelector('span');
+        if (span) span.textContent = text;
+    }
 }
