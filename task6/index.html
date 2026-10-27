@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Snake</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+</head>
+
+<body>
+
+    <div class="desktop-icons">
+        <div class="desktop-icon">
+            <div class="icon-img">🗑️</div>
+            <div class="icon-text">Корзина</div>
+        </div>
+        <div class="desktop-icon">
+            <div class="icon-img">💻</div>
+            <div class="icon-text">Этот компьютер</div>
+        </div>
+    </div>
+
+    <div class="win10-window">
+        <header class="title-bar">
+            <div class="title-left">
+                <span class="win-icon">🐍</span>
+                <span class="title-text">Snake</span>
+            </div>
+            <div class="window-controls">
+                <button class="ctrl-btn disabled">─</button>
+                <button class="ctrl-btn disabled">□</button>
+                <button class="ctrl-btn disabled close">✕</button>
+            </div>
+        </header>
+
+        <div class="game-content">
+            <div class="game-hud">
+                <div class="hud-item">
+                    <span class="hud-label">СОБРАНО ФАЙЛОВ</span>
+                    <span class="hud-value" id="score">0</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-label">РЕКОРД</span>
+                    <span class="hud-value" id="best">0</span>
+                </div>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="game" width="1152" height="1152"></canvas>
+
+                <div class="overlay" id="overlay">
+                    <div class="dialog">
+                        <div class="dialog-header">
+                            <span class="icon" id="dialog-icon">ℹ️</span>
+                            <span id="dialog-title">Система</span>
+                        </div>
+                        <div class="dialog-body" id="dialog-text">
+                            Добро пожаловать в Snake.<br>
+                            Управление: стрелки.
+                        </div>
+                        <div class="dialog-footer">
+                            <button class="fluent-btn" id="start-btn">Запустить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="status-bar">
+            <div class="status-left">Готово</div>
+            <div class="status-right">1 элемент</div>
+        </footer>
+    </div>
+
+    <div class="taskbar">
+        <div class="start-btn">
+            <div class="win-logo">
+                <span></span><span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="taskbar-search">🔍 Поиск</div>
+        <div class="taskbar-app active">
+            <span class="app-icon">🐍</span>
+            <span class="app-name">Snake</span>
+        </div>
+        <div class="taskbar-tray">
+            <span>🔊</span>
+            <span>📶</span>
+            <span>🔋</span>
+            <div class="tray-time">
+                <div id="tray-time">12:00</div>
+                <div id="tray-date">01.01.2026</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
