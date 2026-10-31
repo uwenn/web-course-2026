@@ -10,12 +10,22 @@ export function startGame() {
 
 function endGame() {
   if (state.animId) cancelAnimationFrame(state.animId);
-  showOverlay(
-    "Системная ошибка",
-    `Произошло столкновение.<br>Собрано файлов: <strong>${state.score}</strong>`,
-    "Перезапустить",
-    "⚠️"
-  );
+
+  if (state.win) {
+    showOverlay(
+      "Победа!",
+      `Вы заполнили всю систему файлами!<br>Счёт: <strong>${state.score}</strong>`,
+      "Заново",
+      "🏆"
+    );
+  } else {
+    showOverlay(
+      "Системная ошибка",
+      `Произошло столкновение.<br>Собрано файлов: <strong>${state.score}</strong>`,
+      "Перезапустить",
+      "⚠️"
+    );
+  }
 }
 
 function gameLoop(timestamp) {

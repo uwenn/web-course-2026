@@ -13,6 +13,7 @@ export const state = {
     score: 0,
     best: 0,
     gameOver: true,
+    win: false,
     lastMoveTime: 0,
     animId: null
 };
@@ -29,6 +30,7 @@ export function resetState() {
     state.nextDirection = { x: 1, y: 0 };
     state.score = 0;
     state.gameOver = false;
+    state.win = false;
     state.lastMoveTime = performance.now();
     if (state.animId) cancelAnimationFrame(state.animId);
 }
@@ -75,6 +77,13 @@ export function moveSnake() {
         if (state.score > state.best) {
             state.best = state.score;
         }
+
+        if (state.snake.length === CONFIG.COLS * CONFIG.ROWS) {
+            state.gameOver = true;
+            state.win = true;
+            return;
+        }
+
         spawnApple();
     } else {
         state.snake.pop();
