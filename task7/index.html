@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Neon Feed</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+</head>
+
+<body>
+
+    <div class="glow-bg"></div>
+
+    <header class="header">
+        <div class="header-inner">
+            <h1 class="logo">NEON<span>FEED</span></h1>
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Поиск по заголовкам..." autocomplete="off">
+            </div>
+        </div>
+    </header>
+
+    <main class="layout">
+        <div id="feed" class="feed"></div>
+
+        <div id="error" class="error hidden">
+            <span id="error-text">Ошибка сети</span>
+            <button id="retry-btn">Повторить</button>
+        </div>
+
+        <div id="loader" class="loader hidden">
+            <div class="spinner"></div>
+            <span>Загрузка...</span>
+        </div>
+
+        <div id="end-message" class="end-message hidden">Больше постов нет</div>
+
+        <div id="sentinel" class="sentinel"></div>
+    </main>
+
+</body>
+
+</html>
