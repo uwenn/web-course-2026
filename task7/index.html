@@ -4,28 +4,52 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Neon Feed</title>
+    <title>Forest Feed</title>
     <link rel="stylesheet" href="style.css">
     <script type="module" src="script.js"></script>
 </head>
 
 <body>
 
-    <div class="glow-bg"></div>
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-top">
+                <div class="hero-badge">🌿 NATURE BLOG</div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">100+</span>
+                        <span class="stat-label">постов</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-value">10</span>
+                        <span class="stat-label">авторов</span>
+                    </div>
+                </div>
+            </div>
 
-    <header class="header">
-        <div class="header-inner">
-            <h1 class="logo">NEON<span>FEED</span></h1>
-            <div class="search-box">
-                <input type="text" id="search" placeholder="Поиск по заголовкам..." autocomplete="off">
+            <h1>Лесная лента</h1>
+            <p>Исследуй природу вместе с нами. Свежие заметки, наблюдения и вдохновение от авторов со всего мира.</p>
+
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="search" placeholder="Найти интересную заметку..." autocomplete="off">
             </div>
         </div>
+        <div class="hero-wave"></div>
     </header>
 
     <main class="layout">
+        <div class="feed-header">
+            <h2>Последние записи</h2>
+            <span class="feed-count" id="total-count">0 записей</span>
+        </div>
+
         <div id="feed" class="feed"></div>
 
         <div id="error" class="error hidden">
+            <div class="error-icon">🍂</div>
             <span id="error-text">Ошибка сети</span>
             <button id="retry-btn">Повторить</button>
         </div>
@@ -35,7 +59,10 @@
             <span>Загрузка...</span>
         </div>
 
-        <div id="end-message" class="end-message hidden">Больше постов нет</div>
+        <div id="end-message" class="end-message hidden">
+            <div class="end-icon">🌱</div>
+            <p>Вы дошли до конца леса. Больше постов нет.</p>
+        </div>
 
         <div id="sentinel" class="sentinel"></div>
     </main>
