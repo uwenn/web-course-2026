@@ -8,12 +8,15 @@ export const endMessageEl = document.getElementById('end-message');
 export const searchEl = document.getElementById('search');
 export const retryBtn = document.getElementById('retry-btn');
 export const sentinelEl = document.getElementById('sentinel');
+export const totalCountEl = document.getElementById('total-count');
 
 export function renderPosts() {
     feedEl.innerHTML = '';
 
+    totalCountEl.textContent = `${state.posts.length} записей`;
+
     if (state.filteredPosts.length === 0 && !state.isLoading && !state.isEnd && state.searchQuery) {
-        feedEl.innerHTML = '<div class="post-card"><p class="post-body" style="text-align:center;">Ничего не найдено по вашему запросу.</p></div>';
+        feedEl.innerHTML = '<div class="post-card" style="text-align:center;"><p class="post-body">Ничего не найдено по вашему запросу.</p></div>';
         return;
     }
 
@@ -31,7 +34,17 @@ export function renderPosts() {
 
         const meta = document.createElement('div');
         meta.className = 'post-meta';
-        meta.innerHTML = `<span>Автор: ${post.userId}</span><span>Пост #${post.id}</span>`;
+
+        const author = document.createElement('div');
+        author.className = 'post-author';
+        author.innerHTML = `<span class="author-avatar">👤</span> Автор ${post.userId}`;
+
+        const idSpan = document.createElement('span');
+        idSpan.className = 'post-id';
+        idSpan.textContent = `#${post.id}`;
+
+        meta.appendChild(author);
+        meta.appendChild(idSpan);
 
         card.appendChild(title);
         card.appendChild(body);
