@@ -1,23 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #302b43;
+  background: #faf9fd;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Inter', -apple-system, sans-serif;
-  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  background: #faf9fd;
 }
 
 body {
-  background-color: #09090b;
-  color: #fafafa;
+  min-width: 320px;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  padding: 48px 24px;
+  padding: 34px 28px;
+  background:
+    radial-gradient(circle at 8% 4%, rgba(239, 230, 255, 0.55), transparent 27rem),
+    radial-gradient(circle at 94% 90%, rgba(225, 247, 236, 0.42), transparent 25rem),
+    #faf9fd;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(121, 107, 216, 0.24);
+  outline-offset: 2px;
 }
 
 #root {
   width: 100%;
-  max-width: 680px;
+  min-height: calc(100vh - 68px);
+}
+
+::selection {
+  color: #453a91;
+  background: #e8e2ff;
+}
+
+@media (max-width: 680px) {
+  body {
+    padding: 22px 16px;
+  }
+
+  #root {
+    min-height: calc(100vh - 44px);
+  }
+}
+
+@media (max-width: 380px) {
+  body {
+    padding: 18px 12px;
+  }
 }
