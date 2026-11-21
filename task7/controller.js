@@ -88,4 +88,18 @@ export function init() {
         hideError();
         fetchPosts();
     });
+
+    const scrollBtn = document.getElementById('scroll-to-top');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            scrollBtn.classList.remove('hidden');
+        } else {
+            scrollBtn.classList.add('hidden');
+        }
+    });
+
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 }
