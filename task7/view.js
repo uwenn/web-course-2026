@@ -13,7 +13,7 @@ export const totalCountEl = document.getElementById('total-count');
 export function renderPosts() {
     feedEl.innerHTML = '';
 
-    totalCountEl.textContent = `${state.posts.length} записей`;
+    totalCountEl.textContent = `${state.filteredPosts.length} записей`;
 
     if (state.filteredPosts.length === 0 && !state.isLoading && !state.isEnd && state.searchQuery) {
         feedEl.innerHTML = '<div class="post-card" style="text-align:center;"><p class="post-body">Ничего не найдено по вашему запросу.</p></div>';
