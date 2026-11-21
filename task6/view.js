@@ -15,9 +15,12 @@ export function updateUI() {
   bestEl.textContent = state.best;
 }
 
-export function showOverlay(title, text, buttonText, icon = "ℹ️") {
+export function showOverlay(title, text, buttonText, type = "info") {
   overlay.classList.remove('hidden');
-  dialogIcon.textContent = icon;
+  dialogIcon.className = `dialog-badge ${type}`;
+  if (type === 'win') dialogIcon.textContent = '✓';
+  else if (type === 'error') dialogIcon.textContent = '!';
+  else dialogIcon.textContent = 'i';
   dialogTitle.textContent = title;
   dialogText.innerHTML = text;
   startBtn.textContent = buttonText;

@@ -2,38 +2,39 @@
 <html lang="ru">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
     <title>Snake</title>
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="script.js"></script>
 </head>
 
 <body>
-
     <div class="desktop-icons">
         <div class="desktop-icon">
-            <div class="icon-img">🗑️</div>
+            <div class="icon-img"><span class="ico-trash"></span></div>
             <div class="icon-text">Корзина</div>
         </div>
         <div class="desktop-icon">
-            <div class="icon-img">💻</div>
+            <div class="icon-img"><span class="ico-pc"></span></div>
             <div class="icon-text">Этот компьютер</div>
+        </div>
+        <div class="desktop-icon">
+            <div class="icon-img"><span class="ico-snake"></span></div>
+            <div class="icon-text">Snake</div>
         </div>
     </div>
 
     <div class="win10-window">
-        <header class="title-bar">
+        <div class="title-bar">
             <div class="title-left">
-                <span class="win-icon">🐍</span>
-                <span class="title-text">Snake</span>
+                <span class="ico-snake small"></span>
+                <span>Snake</span>
             </div>
             <div class="window-controls">
-                <button class="ctrl-btn disabled">─</button>
-                <button class="ctrl-btn disabled">□</button>
-                <button class="ctrl-btn disabled close">✕</button>
+                <button class="ctrl-btn">─</button>
+                <button class="ctrl-btn">□</button>
+                <button class="ctrl-btn">✕</button>
             </div>
-        </header>
+        </div>
 
         <div class="game-content">
             <div class="game-hud">
@@ -49,16 +50,14 @@
 
             <div class="canvas-container">
                 <canvas id="game" width="1152" height="1152"></canvas>
-
                 <div class="overlay" id="overlay">
                     <div class="dialog">
                         <div class="dialog-header">
-                            <span class="icon" id="dialog-icon">ℹ️</span>
+                            <span id="dialog-icon" class="dialog-badge info">i</span>
                             <span id="dialog-title">Система</span>
                         </div>
                         <div class="dialog-body" id="dialog-text">
-                            Добро пожаловать в Snake.<br>
-                            Управление: стрелки.
+                            Добро пожаловать в Snake.<br>Управление: стрелки.
                         </div>
                         <div class="dialog-footer">
                             <button class="fluent-btn" id="start-btn">Запустить</button>
@@ -68,10 +67,10 @@
             </div>
         </div>
 
-        <footer class="status-bar">
-            <div class="status-left">Готово</div>
-            <div class="status-right">1 элемент</div>
-        </footer>
+        <div class="status-bar">
+            <span>Готово</span>
+            <span>1 элемент</span>
+        </div>
     </div>
 
     <div class="taskbar">
@@ -80,22 +79,26 @@
                 <span></span><span></span><span></span><span></span>
             </div>
         </div>
-        <div class="taskbar-search">🔍 Поиск</div>
-        <div class="taskbar-app active">
-            <span class="app-icon">🐍</span>
-            <span class="app-name">Snake</span>
+        <div class="taskbar-search">
+            <span class="ico-search"></span>
+            <span>Поиск</span>
+        </div>
+        <div class="taskbar-app">
+            <span class="ico-snake small"></span>
+            <span>Snake</span>
         </div>
         <div class="taskbar-tray">
-            <span>🔊</span>
-            <span>📶</span>
-            <span>🔋</span>
+            <span class="ico-sound"></span>
+            <span class="ico-net"></span>
+            <span class="ico-bat"></span>
             <div class="tray-time">
-                <div id="tray-time">12:00</div>
-                <div id="tray-date">01.01.2026</div>
+                <span id="tray-time">12:00</span>
+                <span id="tray-date">01.01.2026</span>
             </div>
         </div>
     </div>
 
+    <script type="module" src="script.js"></script>
 </body>
 
 </html>

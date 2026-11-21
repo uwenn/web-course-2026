@@ -16,14 +16,14 @@ function endGame() {
       "Победа!",
       `Вы заполнили всю систему файлами!<br>Счёт: <strong>${state.score}</strong>`,
       "Заново",
-      "🏆"
+      "win"
     );
   } else {
     showOverlay(
       "Системная ошибка",
       `Произошло столкновение.<br>Собрано файлов: <strong>${state.score}</strong>`,
       "Перезапустить",
-      "⚠️"
+      "error"
     );
   }
 }
