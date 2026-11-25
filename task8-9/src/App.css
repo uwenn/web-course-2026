@@ -843,3 +843,60 @@
     animation-iteration-count: 1 !important;
   }
 }
+
+
+.import-button {
+  min-height: 34px;
+  padding: 0 11px;
+  border: 1px solid #e8e3f3;
+  border-radius: 9px;
+  background: #fff;
+  color: #7568c8;
+  font-size: 10px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.import-button:hover:not(:disabled) {
+  border-color: #cfc6f2;
+  background: #f7f5ff;
+  transform: translateY(-1px);
+}
+
+.import-button:disabled,
+.add-button:disabled,
+.delete-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.app-message {
+  padding: 11px 14px;
+  border-radius: 10px;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.app-message--error {
+  border: 1px solid #f4d8dc;
+  background: #fff4f5;
+  color: #b94e60;
+}
+
+.app-message--success {
+  border: 1px solid #d9eee2;
+  background: #f0faf4;
+  color: #438d67;
+}
+
+@media (max-width: 520px) {
+  .toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .import-button {
+    align-self: flex-end;
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "todos": [
+    {
+      "text": "Большие яйца",
+      "completed": true,
+      "createdAt": 1795626907849,
+      "id": 1
+    },
+    {
+      "text": "delectus aut autem",
+      "completed": false,
+      "createdAt": 1795627410234,
+      "id": 2
+    },
+    {
+      "text": "quis ut nam facilis et officia qui",
+      "completed": false,
+      "createdAt": 1795627410236,
+      "id": 3
+    },
+    {
+      "text": "fugiat veniam minus",
+      "completed": false,
+      "createdAt": 1795627410237,
+      "id": 4
+    },
+    {
+      "text": "et porro tempora",
+      "completed": true,
+      "createdAt": 1795627410238,
+      "id": 5
+    },
+    {
+      "text": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+      "completed": false,
+      "createdAt": 1795627410240,
+      "id": 6
+    }
+  ]
+}
